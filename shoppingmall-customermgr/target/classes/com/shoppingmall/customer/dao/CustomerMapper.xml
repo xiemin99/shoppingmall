@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shoppingmall.customer.dao.CustomerDAO">
+    <!-- 开启缓存 第一个可以输出日志，第二个不输出日志-->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+<!--    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>-->
+
+    <insert id="create" parameterType="tb_customer">
+        insert into tbl_customer
+            (customerId,pwd,showName,trueName,registerTime)
+     	values
+     	    (#{customerId},#{pwd},#{showName},#{trueName},#{registerTime})
+    </insert>
+
+    <update id="update" parameterType="tb_customer">
+        update tbl_customer
+        set
+            customerId = #{customerId},
+            pwd = #{pwd},
+     		showName = #{showName},
+     		trueName = #{trueName},
+     		registerTime = #{registerTime}
+     	where
+     	    uuid = #{uuid}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from tbl_customer where uuid = #{uuid}
+    </delete>
+
+    <select id="getById" parameterType="java.lang.Integer" resultType="tb_customer">
+        select * from tbl_customer
+        where
+            customerId = #{customerId}
+    </select>
+
+    <select id="getByConditionPage" resultType="tb_customer" parameterType="tb_query_customer" flushCache="true">
+        select * from tbl_customer
+        <where>
+            <if test="uuid != null &amp;&amp; uuid > 0">
+                and uuid = #{uuid}
+            </if>
+            <if test="customerId != null &amp;&amp; customerId != ''">
+                and customerId = #{customerId}
+            </if>
+            <if test="showName != null &amp;&amp; showName != ''">
+                and showName = #{showName}
+            </if>
+        </where>
+    </select>
+</mapper>

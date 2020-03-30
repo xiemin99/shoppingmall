@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/shoppingmall-cartmgr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shoppingmall-customermgr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shoppingmall-filemgr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shoppingmall-goodsmgr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shoppingmall-ordermgr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shoppingmall-storemgr" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shoppingmall-web" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

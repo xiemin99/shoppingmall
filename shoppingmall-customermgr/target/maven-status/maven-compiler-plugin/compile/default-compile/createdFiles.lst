@@ -1,0 +1,8 @@
+com\shoppingmall\customer\web\CustomerController.class
+com\shoppingmall\customer\test\TestService.class
+com\shoppingmall\customer\test\TestClient.class
+com\shoppingmall\customer\service\impl\CustomerServiceImpl.class
+com\shoppingmall\customer\service\ICustomerService.class
+com\shoppingmall\customer\dao\CustomerDAO.class
+com\shoppingmall\customer\vo\CustomerQueryModel.class
+com\shoppingmall\customer\vo\CustomerModel.class

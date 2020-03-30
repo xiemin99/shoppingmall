@@ -1,0 +1,9 @@
+com\shoppingmall\utils\common\vo\BaseModel.class
+com\shoppingmall\utils\JsonHelper.class
+com\shoppingmall\utils\common\dao\BaseDAO.class
+com\shoppingmall\utils\page\PagePlugin.class
+com\shoppingmall\utils\common\service\IBaseService.class
+com\shoppingmall\utils\DateFormatHelper.class
+com\shoppingmall\utils\page\ReflectHelper.class
+com\shoppingmall\utils\common\service\impl\BaseServiceImpl.class
+com\shoppingmall\utils\page\Page.class

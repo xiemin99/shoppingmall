@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.shoppingmall.customer.vo.CustomerModel" alias="tb_customer"/>
+		<typeAlias type="com.shoppingmall.customer.vo.CustomerQueryModel" alias="tb_query_customer"/>
+	</typeAliases>
+
+	<!--  分页功能 -->
+	<plugins>
+		<plugin interceptor="com.shoppingmall.utils.page.PagePlugin">
+			<property name="dialect" value="mysql"/>
+			<property name="pageSqlId" value=".*Page.*"/>
+		</plugin>
+	</plugins>
+</configuration> 
